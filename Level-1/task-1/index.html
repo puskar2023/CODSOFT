@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="nav" id="navbar">
+      <div class="logo">Portfolio</div>
+
+      <div class="menu-btn" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="op" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <section id="home" class="home">
+      <div class="left">
+        <h2>Puskar Mandal</h2>
+        <h4>I'm a <span>Frontend Developer</span></h4>
+        <p>
+          I’m continuously learning by building real-world projects and
+          improving my understanding of modern frontend development.
+        </p>
+        <div class="details">
+        <button class="cv">Download resume</button>
+        <a href="https://github.com/puskar2023"><img src="./assets/github_icon.png" alt=""></a>
+        </div>
+      </div>
+      <div class="right">
+        <img
+          src="https://images.unsplash.com/photo-1706998903423-d9f6c081a2ed?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+      </div>
+    </section>
+    <section id="about">
+      <div class="left">
+        <img
+          src="https://images.stockcake.com/public/1/9/9/19963d01-3218-46b6-8c85-7a281f46dcc2_large/futuristic-robot-being-stockcake.jpg"
+          alt=""
+        />
+      </div>
+      <div class="right">
+        <h2>About Me</h2>
+        <h4>
+          I’m a <span>frontend developer</span> who enjoys building clean,
+          responsive, and user-friendly web interfaces.
+        </h4>
+        <div class="b">
+          <h3>What I Focus On</h3>
+          <ul class="about-list">
+            <li>Creating responsive and accessible interfaces</li>
+            <li>Writing clean, maintainable frontend code</li>
+            <li>Turning ideas and designs into functional websites</li>
+          </ul>
+        </div>
+        <p class="about-note">
+          I’m continuously learning by building real-world projects and
+          improving my understanding of modern frontend development. I also
+          enjoy exploring clean UI designs and improving user experience.
+        </p>
+      </div>
+    </section>
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="allskills">
+        <div class="singleskill">
+          <img src="./assets/html.png" alt="" />
+          <h3>HTML</h3>
+        </div>
+        <div class="singleskill">
+          <img src="./assets/css.png" alt="" />
+          <h3>CSS</h3>
+        </div>
+        <div class="singleskill">
+          <img src="./assets/js.png" alt="" />
+          <h3>JS</h3>
+        </div>
+        <div class="singleskill">
+          <img src="./assets//react.png" alt="" />
+          <h3>React</h3>
+        </div>
+        <div class="singleskill">
+          <img src="./assets/tailwind.png" alt="" />
+          <h3>Tailwind</h3>
+        </div>
+        <div class="singleskill">
+          <img src="./assets/java.png" alt="" />
+          <h3>JAVA</h3>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="allprojects">
+        <div class="singleproject">
+          <div class="im">
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset="./assets/proj-desk/e-com-p.png"
+              />
+              <source
+                media="(max-width: 1023px)"
+                srcset="./assets/projects/e-com.png"
+              />
+              <img src="./assets/projects/e-com.png" alt="image" />
+            </picture>
+          </div>
+          <h4 class="title">E-Commerce Website</h4>
+          <p>
+            A full-featured e-commerce web application with product listing,
+            cart functionality, and secure checkout.
+          </p>
+          <a href="https://github.com/puskar2023/react-ecommerce-website-2.0"
+            >View Project</a
+          >
+        </div>
+        <div class="singleproject">
+          <div class="im">
+            <!-- <img src="./assets/projects/chatbot.png" alt="" /> -->
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset="./assets/proj-desk/chatbot.png"
+              />
+              <source
+                media="(max-width: 1023px)"
+                srcset="./assets/projects/chatbot.png"
+              />
+              <img
+                style="object-position: center"
+                src="./assets/projects/chatbot.png"
+                alt="image"
+              />
+            </picture>
+          </div>
+          <h4 class="title">AI Chatbot</h4>
+          <p>
+            An AI-powered chatbot that provides instant, intelligent responses
+            using natural language processing.
+          </p>
+          <a href="">View Project</a>
+        </div>
+        <div class="singleproject">
+          <div class="im">
+            <!-- <img src="./assets/projects/github.png" alt=""> -->
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcset="./assets/proj-desk/github.png"
+              />
+              <source
+                media="(max-width: 1023px)"
+                srcset="./assets/projects/github.png"
+              />
+              <img
+                style="object-position: center"
+                src="./assets/projects/github.png"
+                alt="image"
+              />
+            </picture>
+          </div>
+          <h4 class="title">GitHub Profile Finter</h4>
+
+          <p>
+            A web app that searches and displays GitHub user profiles and
+            repositories using the GitHub API.
+          </p>
+          <a href="https://github.com/puskar2023/github-profile-finder"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </section>
+    <section id="resume">
+      <h2>Resume</h2>
+      <div class="content">
+        <div class="left">
+          <h3>Puskar Mandal <br /><span>Frontend Developer</span></h3>
+          <p>
+            I am a passionate frontend developer focused on building clean,
+            responsive, and user-friendly web interfaces. I enjoy turning ideas
+            and designs into functional websites and continuously improve my
+            skills by building real-world projects using modern frontend
+            technologies.
+          </p>
+        </div>
+        <div class="right">
+          <h2>Education</h2>
+          <h3 style="margin-bottom: 3rem">
+            Bachelor of Technology (B.Tech) – Computer Science & Engineering
+          </h3>
+          <h3 style="opacity: 0.6">Bengal Institute of Technology</h3>
+          <h3 style="opacity: 0.7">2022 – 2026</h3>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+
+        <input type="email" placeholder="Your Email" required />
+
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
