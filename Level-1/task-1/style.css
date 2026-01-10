@@ -17,7 +17,7 @@ html {
 body {
   background-color: black;
   color: white;
-  background: linear-gradient(to right, rgb(10, 29, 10), black);
+  background: linear-gradient(to right, rgb(9, 43, 14), black);
 }
 
 #navbar {
@@ -234,11 +234,15 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  text-align: center;
 }
 #about .left {
   margin-top: 1rem;
-  width: 80vw;
-  height: 80vw;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #about .left img {
   height: 100%;
