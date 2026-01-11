@@ -36,7 +36,7 @@ useEffect(() => {
         {/* NAVBAR */}
         <nav className="fixed top-0 w-full z-50 backdrop-blur bg-white/70 dark:bg-black/40 border-b border-black/10 dark:border-white/10">
           <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-            <h1 className="text-xl font-bold">NovaTech Solutions</h1>
+            <h1 className="text-xl font-bold bg-gradient-to-r from-[#9B5DE0] to-[#FA891A] bg-clip-text text-transparent">PrimeTech Solutions</h1>
 
             <div className="flex items-center gap-6 text-sm">
               <div className="hidden md:flex gap-6 text-zinc-600 dark:text-zinc-300">
@@ -77,7 +77,7 @@ useEffect(() => {
               </h2>
 
               <p className="mt-6 text-zinc-600 dark:text-zinc-400 max-w-xl">
-                NovaTech Solutions is a professional technology services company
+                PrimeTech Solutions is a professional technology services company
                 delivering scalable web, mobile, and cloud solutions worldwide.
               </p>
 
@@ -116,7 +116,7 @@ useEffect(() => {
               <h3 className="text-4xl font-bold">About Our Company</h3>
               <p className="mt-6 text-zinc-600 dark:text-zinc-400">
                 Founded with a vision to empower businesses through technology,
-                NovaTech Solutions partners with startups and enterprises to
+                PrimeTech Solutions partners with startups and enterprises to
                 deliver secure, scalable, and impactful digital products.
               </p>
             </div>
@@ -219,7 +219,7 @@ useEffect(() => {
 
         {/* FOOTER */}
         <footer className="py-8 text-center text-zinc-500 border-t border-black/10 dark:border-white/10">
-          © 2026 NovaTech Solutions. All rights reserved.
+          © 2026 PrimeTech Solutions. All rights reserved.
         </footer>
       </div>
     </div>
