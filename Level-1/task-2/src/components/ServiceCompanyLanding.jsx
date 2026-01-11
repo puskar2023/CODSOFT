@@ -167,7 +167,7 @@ useEffect(() => {
                     key={step}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.2 }}
+                    transition={{ delay: i * 0.4 }}
                     className="rounded-3xl bg-black/5 dark:bg-white/5 p-8"
                   >
                     <CheckCircle className="text-indigo-500 mb-4" />
@@ -187,17 +187,21 @@ useEffect(() => {
           <div className="max-w-7xl mx-auto">
             <h3 className="text-4xl font-bold mb-12 text-center">Our Team</h3>
             <div className="grid md:grid-cols-3 gap-8">
-              {["Engineering", "Design", "Strategy"].map((team) => (
-                <div
+              {["Engineering", "Design", "Strategy"].map((team,i) => (
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.4 }}
+                    className="rounded-3xl bg-black/5 dark:bg-white/5 p-8"
                   key={team}
-                  className="rounded-3xl bg-white dark:bg-black/40 p-8 text-center"
+                  // className="rounded-3xl bg-white dark:bg-black/40 p-8 text-center"
                 >
                   <Users className="text-indigo-500 mx-auto mb-4" />
                   <h4 className="text-xl font-semibold">{team}</h4>
                   <p className="mt-4 text-zinc-600 dark:text-zinc-400">
                     Highly skilled professionals with industry experience.
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
