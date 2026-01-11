@@ -600,4 +600,33 @@ body {
   #contact .contact-form {
     width: 50rem;
   }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+/* When visible */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional variations */
+.reveal-left {
+  transform: translateX(-80px);
+}
+
+.reveal-right {
+  transform: translateX(80px);
+}
+
+.reveal-zoom {
+  transform: scale(0.7);
+}
+
+.singleskill,
+.singleproject {
+  transition-delay: 0.2s;
 }/*# sourceMappingURL=style.css.map */
