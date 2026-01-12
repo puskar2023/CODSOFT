@@ -374,7 +374,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
   #skills .allskills .singleskill {
-    height: 36vh;
+    height: 29vh;
   }
   #skills .allskills .singleskill img {
     height: 7rem;

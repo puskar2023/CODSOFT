@@ -8,35 +8,37 @@ import {
   Phone,
   Sun,
   Moon,
+  Star,
+  Quote,
+  Globe,
 } from "lucide-react";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function ServiceCompanyLanding() {
   const [dark, setDark] = useState(true);
 
-// useEffect(() => {
-//   const savedTheme = localStorage.getItem("theme");
-//   if (savedTheme === "dark") {
-//     setDark(true);
-//   }
-// }, []);
-
-useEffect(() => {
-  if (dark) {
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  } else {
-    document.documentElement.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  }
-}, [dark]);
-
+  useEffect(() => {
+    if (dark) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [dark]);
   return (
     <div className={dark ? "dark" : ""}>
       <div className="bg-gradient-to-br from-white via-zinc-100 to-white dark:from-black dark:via-zinc-900 dark:to-black text-zinc-900 dark:text-white transition-colors duration-300">
         {/* NAVBAR */}
         <nav className="fixed top-0 w-full z-50 backdrop-blur bg-white/70 dark:bg-black/40 border-b border-black/10 dark:border-white/10">
           <div className="max-w-7xl mx-auto px-8 py-4 flex justify-between items-center">
-            <h1 className="text-xl font-bold bg-gradient-to-r from-[#9B5DE0] to-[#FA891A] bg-clip-text text-transparent">PrimeTech Solutions</h1>
+            <h1 className="text-xl font-bold bg-gradient-to-r from-[#9B5DE0] to-[#FA891A] bg-clip-text text-transparent">
+              PrimeTech Solutions
+            </h1>
 
             <div className="flex items-center gap-6 text-sm">
               <div className="hidden md:flex gap-6 text-zinc-600 dark:text-zinc-300">
@@ -44,6 +46,8 @@ useEffect(() => {
                 <a href="#services">Services</a>
                 <a href="#process">Process</a>
                 <a href="#team">Team</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#testimonials">Clients</a>
                 <a href="#contact">Contact</a>
               </div>
 
@@ -77,8 +81,9 @@ useEffect(() => {
               </h2>
 
               <p className="mt-6 text-zinc-600 dark:text-zinc-400 max-w-xl">
-                PrimeTech Solutions is a professional technology services company
-                delivering scalable web, mobile, and cloud solutions worldwide.
+                PrimeTech Solutions is a professional technology services
+                company delivering scalable web, mobile, and cloud solutions
+                worldwide.
               </p>
 
               <div className="mt-8 flex gap-4">
@@ -154,6 +159,26 @@ useEffect(() => {
           </div>
         </section>
 
+        {/* PORTFOLIO */}
+        <section id="portfolio" className="py-32 px-8">
+          <div className="max-w-7xl mx-auto">
+            <h3 className="text-4xl font-bold mb-12 text-center">
+              Recent Projects
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[1, 2, 3].map((p) => (
+                <motion.img
+                  key={p}
+                  whileHover={{ scale: 1.05 }}
+                  src={`https://plus.unsplash.com/premium_photo-1661293879952-c5c093282801?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/`}
+                  alt="Project"
+                  className="rounded-3xl shadow-lg"
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* PROCESS */}
         <section id="process" className="py-32 px-8">
           <div className="max-w-7xl mx-auto">
@@ -187,12 +212,12 @@ useEffect(() => {
           <div className="max-w-7xl mx-auto">
             <h3 className="text-4xl font-bold mb-12 text-center">Our Team</h3>
             <div className="grid md:grid-cols-3 gap-8">
-              {["Engineering", "Design", "Strategy"].map((team,i) => (
+              {["Engineering", "Design", "Strategy"].map((team, i) => (
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.4 }}
-                    className="rounded-3xl bg-black/5 dark:bg-white/5 p-8"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.4 }}
+                  className="rounded-3xl bg-black/5 dark:bg-white/5 p-8"
                   key={team}
                   // className="rounded-3xl bg-white dark:bg-black/40 p-8 text-center"
                 >
@@ -204,6 +229,26 @@ useEffect(() => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* TESTIMONIALS */}
+        <section
+          id="testimonials"
+          className="py-32 px-8 bg-black/5 dark:bg-white/5"
+        >
+          <div className="max-w-5xl mx-auto text-center">
+            <Quote className="mx-auto text-indigo-500 mb-4" size={40} />
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="text-xl text-zinc-600 dark:text-zinc-400"
+            >
+              “PrimeTech transformed our digital infrastructure and accelerated
+              our growth beyond expectations.”
+            </motion.p>
+            <p className="mt-6 font-semibold">— Enterprise Client</p>
           </div>
         </section>
 
