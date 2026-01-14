@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import project1 from '../assets/project1.jpg';
+import project2 from '../assets/project2.jpg';
+import project3 from '../assets/project3.jpg';
 import {
   ArrowRight,
   CheckCircle,
@@ -20,6 +23,11 @@ const fadeUp = {
 
 export default function ServiceCompanyLanding() {
   const [dark, setDark] = useState(true);
+  const projects = [
+  { id: 1, img: project1 },
+  { id: 2, img: project2 },
+  { id: 3, img: project3 },
+];
 
   useEffect(() => {
     if (dark) {
@@ -166,15 +174,15 @@ export default function ServiceCompanyLanding() {
               Recent Projects
             </h3>
             <div className="grid md:grid-cols-3 gap-8">
-              {[1, 2, 3].map((p) => (
-                <motion.img
-                  key={p}
-                  whileHover={{ scale: 1.05 }}
-                  src={`https://plus.unsplash.com/premium_photo-1661293879952-c5c093282801?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/`}
+              {projects.map((p,i) => {
+                return <motion.img
+                  key={i}
+                  whileHover={{ scale: 1.1}}
+                  src={p.img}
                   alt="Project"
                   className="rounded-3xl shadow-lg"
                 />
-              ))}
+})}
             </div>
           </div>
         </section>
